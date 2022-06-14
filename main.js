@@ -11,16 +11,24 @@
 //}
 let countEl = document.getElementById("count-el")
 
+let saveEl = document.getElementById("save-el")
+
 let count = 0
 
+
+
 function increment() {
- count = count + 1
- countEl.innerText = count 
+ count += 1
+ countEl.textContent = count 
     console.log(count)
 }
 
 function save(){
+    let countdash = count + " - "
+    saveEl.textContent += countdash
+countEl.textContent = 0
     console.log(count)
+    count= 0
 }
 
 
